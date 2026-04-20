@@ -7,7 +7,7 @@ class ReLU:
     self.input = input
     return np.maximum(0, input)
 
-  def backeward(self, grad_output):
+  def backward(self, grad_output):
     grad = grad_output.copy()
     grad[self.input<=0] = 0
     return grad
