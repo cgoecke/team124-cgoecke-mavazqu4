@@ -8,6 +8,6 @@ class CategoricalCrossEntropy:
     loss = -np.log(correct_confidences)
     return np.mean(loss)
 
-  def backwards(self, y_true, y_pred):
+  def backward(self, y_true, y_pred):
     samples = y_pred.shape[0]
     return (y_pred - y_true) / samples
