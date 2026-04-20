@@ -23,7 +23,7 @@ class Adam:
     layer.m_w = self.beta1 * layer.m_w + (1 - self.beta1) * layer.grad_weights
     layer.v_w = self.beta2 * layer.v_w + (1 - self.beta2) * (layer.grad_weights ** 2)
     layer.m_b = self.beta1 * layer.m_b + (1 - self.beta1) * layer.grad_biases
-    layer.v_b = self.beta1 * layer.v_b + (1 - self.beta2) * (layer.grad_biases ** 2)
+    layer.v_b = self.beta2 * layer.v_b + (1 - self.beta2) * (layer.grad_biases ** 2)
 
     #Bias Correction
     m_w_hat = layer.m_w / (1 - self.beta1 ** self.t)
