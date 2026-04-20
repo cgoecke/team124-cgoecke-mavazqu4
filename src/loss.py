@@ -1,4 +1,4 @@
-import numpy and np
+import numpy as np
 
 class CategoricalCrossEntropy:
   def forward(self, y_true, y_pred):
