@@ -11,7 +11,7 @@ def one_hot(y,num_classes=10):
   return np.eye(num_classes)[y]
 
 def accuracy(y_true, y_pred):
-  predicitons = np.argmax(y_pred, axis=1)
+  predictions = np.argmax(y_pred, axis=1)
   labels = np.argmax(y_true, axis=1)
   return np.mean(predicitons == labels)
 
